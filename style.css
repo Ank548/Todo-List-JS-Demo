@@ -1,0 +1,183 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap'); */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+}
+
+.container{
+    background: linear-gradient(135deg,rgb(109, 7, 160),rgb(98, 1, 70))no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main{
+    background-color: white;
+    margin-top: 22vh;
+    margin-bottom: 12vh;
+    padding: 30px 25px;
+    width: 550px;
+    border-radius: 12px;
+}
+
+.main div h1{
+    line-height: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    color: rgb(109, 7, 160);
+}
+
+.main div h1 img{
+    height: 100%;
+    margin-left: 15px;
+}
+
+.main .input{
+    margin-top: 40px;
+    background-color: rgba(223, 223, 223, 0.885);
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .input input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 18px;
+    width: 78%;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.main .input input::placeholder{
+    font-size: 16px;
+}
+
+.main .input input:-webkit-autofill{
+    -webkit-box-shadow: 0 0 0 1000px rgba(223, 223, 223, 0.81) inset !important;
+}
+
+.main .input button{
+    border-radius: 25px;
+    padding: 18px 40px;
+    border: none;
+    font-size: 16px;
+    background-color: rgb(206, 72, 19);
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+.show ul{
+    margin-top: 18px;
+    max-height: 312px;
+    overflow-y: scroll;
+}
+
+.show ul::-webkit-scrollbar{
+    width: 3px;
+}
+
+/* .show ul::-webkit-scrollbar-track {
+    border-radius: 50px;
+    background: #f1f1f1;
+} */
+
+.show ul::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background: #888;
+  }
+
+.show ul li{
+    list-style: none;
+    padding: 4px 50px;
+    user-select: none;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: flex-start;
+    position: relative;
+    font-size: 20px;
+}
+
+.show ul li p{
+    width: 100%;
+    word-wrap: break-word;
+    padding: 14px 0;
+}
+
+.show ul li::before{
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background: url(/img/unchecked.png)no-repeat center center/cover;
+    left: 10px;
+    top: 14px;
+}
+
+.checked{
+    text-decoration: line-through;
+}
+
+.show ul .checked::before{
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background: url(/img/checked.png)no-repeat center center/cover;
+    left: 10px;
+    top: 14px;
+}
+
+.show ul li span{
+    position: absolute;
+    right: 18px;
+    top: 8px;
+    padding: 7px 12px;
+    border-radius: 24px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.show ul li span:hover{
+    background-color: rgb(216, 216, 216);
+    color: red;
+}
+
+@media only screen and (max-width:650px){
+    .main{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width:415px){
+    .main .input button{
+        padding: 18px 20px;
+    }
+    
+    .show ul li span{
+        right: 10px;
+    }
+    /*     
+    .main .show ul li p{
+        overflow-x: scroll;
+        word-wrap: normal;
+    }
+
+    .show ul li p::-webkit-scrollbar{
+        width: 3px;
+    } */
+}
+
+@media only screen and (max-width:370px){
+    .show ul li span{
+        right: 5px;
+    }
+}
